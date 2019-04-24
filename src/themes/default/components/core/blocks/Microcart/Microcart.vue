@@ -18,7 +18,7 @@
         </button>
       </div>
     </div>
-    <div class="row middle-xs bg-cl-primary top-sm px40 actions">
+    <div class="row middle-xs bg-cl-primary top-sm px40 actions clearcart-row">
       <div class="col-xs-12 col-sm">
         <h2
           v-if="productsInCart.length"
@@ -234,6 +234,16 @@ export default {
   }
 
   .clearcart {
+    &-row {
+      &::after {
+        display: inline-block;
+        content: '';
+        border-bottom: 1px solid #f2f2f2;
+        width: calc(100% - 20px);
+        transform: translateY(-22px);
+        margin: 0 auto;
+      }
+    }
     &-col {
       display: flex;
       align-self: center;
